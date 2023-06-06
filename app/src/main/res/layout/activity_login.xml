@@ -33,7 +33,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/log"/>
-
+    <TextView
+        android:id="@+id/clicktoreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Password"
+        android:textSize="15sp"
+        android:layout_margin="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/clicktoreg"
@@ -42,6 +50,7 @@
         android:text="Click to Reg"
         android:textSize="15sp"
         android:layout_margin="30dp"
+        android:textColor="@color/material_dynamic_tertiary0"
         android:textStyle="bold" />
 
 

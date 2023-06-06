@@ -24,7 +24,7 @@ public class login extends AppCompatActivity {
     EditText txtemail,txtpassword;
     ImageView SignIN ;
     FirebaseAuth mAuth;
-    TextView ClickToReg;
+    TextView ClickToReg,Reset;
 // ...
 // Initialize Firebase Auth
 @Override
@@ -47,6 +47,14 @@ public void onStart() {
         mAuth = FirebaseAuth.getInstance();
         SignIN = findViewById(R.id.btnsignup);
         ClickToReg = findViewById(R.id.clicktoreg);
+        Reset = findViewById(R.id.clicktoreset);
+
+        Reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),fogotpassword.class));
+            }
+        });
 
         SignIN.setOnClickListener(new View.OnClickListener() {
             @Override
