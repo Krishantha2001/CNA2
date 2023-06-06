@@ -8,6 +8,7 @@ import androidx.core.app.NotificationManagerCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -28,6 +29,7 @@ public class fogotpassword extends AppCompatActivity {
     EditText txtemail;
     TextView textiew;
     FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +46,6 @@ public class fogotpassword extends AppCompatActivity {
             String emailAddress = String.valueOf(txtemail.getText()).trim();
 
 
-
-
             @Override
             public void onClick(View v) {
 //                textiew.setText(txtemail.getText());
@@ -60,6 +60,14 @@ public class fogotpassword extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(getApplicationContext(), "Email send", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), login.class));
+                                        Intent intent = getPackageManager().getLaunchIntentForPackage("com.example.emailapp");
+                                        showNotification();
+                                        if (intent != null) {
+                                            startActivity(intent);
+                                        } else {
+
+                                        }
+
 
                                     }
                                 }
@@ -70,4 +78,36 @@ public class fogotpassword extends AppCompatActivity {
             }
         });
     }
+
+    private void showNotification() {
+        // Create an explicit intent to launch an activity when the notification is clicked
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+
+        // Create the notification
+        int notificationId = 1;
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, getString(R.string.channel_id))
+                .setSmallIcon(R.drawable.cna)
+                .setContentTitle("Notification Title")
+                .setContentText("Notification Message")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true);
+
+        // Show the notification
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        notificationManager.notify(notificationId, builder.build());
+    }
+
 }
