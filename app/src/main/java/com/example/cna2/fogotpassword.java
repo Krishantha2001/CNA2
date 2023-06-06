@@ -89,8 +89,8 @@ public class fogotpassword extends AppCompatActivity {
         int notificationId = 1;
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, getString(R.string.channel_id))
                 .setSmallIcon(R.drawable.cna)
-                .setContentTitle("Notification Title")
-                .setContentText("Notification Message")
+                .setContentTitle("Password Reset")
+                .setContentText("Password Reset Email send to the Your email please check that Thank You!!!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);

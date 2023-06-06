@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class login extends AppCompatActivity {
 
     EditText txtemail,txtpassword;
-    ImageView SignIN ;
+    ImageView SignIN,google,facebook ;
     FirebaseAuth mAuth;
     TextView ClickToReg,Reset;
 // ...
@@ -48,11 +48,20 @@ public void onStart() {
         SignIN = findViewById(R.id.btnsignup);
         ClickToReg = findViewById(R.id.clicktoreg);
         Reset = findViewById(R.id.clicktoreset);
+        google = findViewById(R.id.google);
+        facebook = findViewById(R.id.facebook);
+
 
         Reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),fogotpassword.class));
+            }
+        });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), googlesignin.class));
             }
         });
 
