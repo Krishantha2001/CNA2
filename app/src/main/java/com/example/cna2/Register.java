@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +23,8 @@ import com.google.firebase.auth.FirebaseUser;
 public class Register extends AppCompatActivity {
 
     EditText txtemail,txtpassword;
-    Button SignUp;
+
+    ImageView SignUp ;
     FirebaseAuth mAuth;
     TextView ClickToLog;
     @Override

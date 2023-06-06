@@ -6,30 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".login"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/si"
+    >
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/emailid"
         android:inputType="textEmailAddress"
-        android:hint="Email"/>
+        android:hint="  Email"
+        android:background="@drawable/a"
+        android:layout_margin="10dp"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:id="@+id/passwordid"
-        android:hint="Password"/>
-    <Button
+        android:hint="  Password"
+        android:background="@drawable/a"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
         android:id="@+id/btnsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LogIn"/>
+        android:background="@drawable/log"/>
+
+
     <TextView
         android:id="@+id/clicktoreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click to Reg"
-        android:layout_margin="20sp"
-        android:textStyle="bold"/>
+        android:textSize="15sp"
+        android:layout_margin="30dp"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

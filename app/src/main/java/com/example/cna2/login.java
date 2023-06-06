@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class login extends AppCompatActivity {
 
     EditText txtemail,txtpassword;
-    Button SignUp;
+    ImageView SignIN ;
     FirebaseAuth mAuth;
     TextView ClickToReg;
 // ...
@@ -44,10 +45,10 @@ public void onStart() {
         txtemail = findViewById(R.id.emailid);
         txtpassword = findViewById(R.id.passwordid);
         mAuth = FirebaseAuth.getInstance();
-        SignUp = findViewById(R.id.btnsignup);
+        SignIN = findViewById(R.id.btnsignup);
         ClickToReg = findViewById(R.id.clicktoreg);
 
-        SignUp.setOnClickListener(new View.OnClickListener() {
+        SignIN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginuser();
