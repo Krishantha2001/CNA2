@@ -27,7 +27,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class fogotpassword extends AppCompatActivity {
     ImageView reset;
     EditText txtemail;
-    TextView textiew;
+
     FirebaseAuth auth;
 
     @Override
@@ -37,7 +37,7 @@ public class fogotpassword extends AppCompatActivity {
         reset = findViewById(R.id.resetpassword);
         txtemail = findViewById(R.id.emailid);
         auth = FirebaseAuth.getInstance();
-        textiew = findViewById(R.id.textView);
+
 
 
         reset.setOnClickListener(new View.OnClickListener() {

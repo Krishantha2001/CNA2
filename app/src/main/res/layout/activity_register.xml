@@ -33,10 +33,11 @@
         android:id="@+id/clicktolog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click to Log"
+        android:text="Click here to Log"
         android:textSize="15sp"
         android:layout_margin="30dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
 
 </LinearLayout>

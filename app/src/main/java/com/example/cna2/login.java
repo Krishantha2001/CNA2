@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,9 +23,10 @@ import com.google.firebase.auth.FirebaseUser;
 public class login extends AppCompatActivity {
 
     EditText txtemail,txtpassword;
-    ImageView SignIN,google,facebook ;
+    ImageView SignIN,google ;
     FirebaseAuth mAuth;
     TextView ClickToReg,Reset;
+
 // ...
 // Initialize Firebase Auth
 @Override
@@ -49,7 +51,7 @@ public void onStart() {
         ClickToReg = findViewById(R.id.clicktoreg);
         Reset = findViewById(R.id.clicktoreset);
         google = findViewById(R.id.google);
-        facebook = findViewById(R.id.facebook);
+
 
 
         Reset.setOnClickListener(new View.OnClickListener() {

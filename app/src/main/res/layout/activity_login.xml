@@ -48,44 +48,52 @@
         android:layout_margin="50dp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/clicktoreg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click to Register"
-        android:textSize="15sp"
-        android:layout_margin="50dp"
-        android:textColor="@color/material_dynamic_tertiary0"
-        android:textStyle="bold"/>
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="___________________OR__________________"
-        android:textStyle="bold"
-        android:textSize="20sp"/>
-
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="wrap_content">
+        <TextView
 
-        <ImageView
-            android:id="@+id/facebook"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/facebook"
-            android:layout_marginRight="50dp"/>
-
-        <ImageView
-            android:id="@+id/google"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/google"
-            android:layout_marginLeft="50dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If You Don't have an Account Click here to"
+            android:textSize="15sp"
+            android:layout_marginBottom="50dp"
+            android:textColor="@color/material_dynamic_tertiary0"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/clicktoreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Register"
+            android:textSize="15sp"
+            android:layout_marginBottom="50dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
     </LinearLayout>
+
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="____________OR_SIGNIN_WITH___________"
+        android:textColor="#1E1E1D"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+
+        android:id="@+id/google"
+        android:layout_width="246dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/google1" />
+
+
 
 
 
