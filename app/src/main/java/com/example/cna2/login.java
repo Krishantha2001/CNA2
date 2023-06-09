@@ -1,5 +1,7 @@
 package com.example.cna2;
 
+import static com.example.cna2.R.id.btnsignin;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class login extends AppCompatActivity {
 
     EditText txtemail,txtpassword;
-    ImageView SignIN,google ;
+    ImageView SignIN,google,facebook ;
     FirebaseAuth mAuth;
     TextView ClickToReg,Reset;
 
@@ -47,10 +49,11 @@ public void onStart() {
         txtemail = findViewById(R.id.emailid);
         txtpassword = findViewById(R.id.passwordid);
         mAuth = FirebaseAuth.getInstance();
-        SignIN = findViewById(R.id.btnsignup);
+        SignIN = findViewById(R.id.btnsignin);
         ClickToReg = findViewById(R.id.clicktoreg);
         Reset = findViewById(R.id.clicktoreset);
         google = findViewById(R.id.google);
+        facebook = findViewById(R.id.facebook);
 
 
 

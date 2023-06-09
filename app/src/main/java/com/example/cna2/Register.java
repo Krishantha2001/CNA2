@@ -24,7 +24,7 @@ public class Register extends AppCompatActivity {
 
     EditText txtemail,txtpassword;
 
-    ImageView SignUp ;
+    ImageView SignUp,google,facebook;
     FirebaseAuth mAuth;
     TextView ClickToLog;
     @Override
@@ -36,6 +36,7 @@ public class Register extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Successful",Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
         }
+
     }
 
     @Override
@@ -47,6 +48,7 @@ public class Register extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         SignUp = findViewById(R.id.btnsignup);
         ClickToLog = findViewById(R.id.clicktolog);
+        google = findViewById(R.id.google);
 
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,13 @@ public class Register extends AppCompatActivity {
                 createuser();
             }
         });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), googlesignin.class));
+            }
+        });
+
         ClickToLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

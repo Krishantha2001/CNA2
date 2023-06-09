@@ -58,10 +58,11 @@ public class fogotpassword extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
+                                        showNotification();
                                         Toast.makeText(getApplicationContext(), "Email send", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), login.class));
                                         Intent intent = getPackageManager().getLaunchIntentForPackage("com.example.emailapp");
-                                        showNotification();
+
                                         if (intent != null) {
                                             startActivity(intent);
                                         } else {

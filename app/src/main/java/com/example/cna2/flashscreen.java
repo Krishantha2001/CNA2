@@ -6,13 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class flashscreen extends AppCompatActivity {
-Button signin,signup;
+ImageView go;
 FirebaseAuth mAuth;
 
 
@@ -22,20 +23,14 @@ FirebaseAuth mAuth;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flashscreen);
-    signin = findViewById(R.id.signin);
-    signup = findViewById(R.id.signup);
+    go = findViewById(R.id.go);
 
-    signup.setOnClickListener(new View.OnClickListener() {
+    go.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(),Register.class));
+            startActivity(new Intent(getApplicationContext(),login.class));
         }
     });
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),login.class));
-            }
-        });
     }
+
 }
