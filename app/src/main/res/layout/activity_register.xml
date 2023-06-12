@@ -89,21 +89,22 @@
 
         <ImageView
 
-            android:id="@+id/google"
+            android:id="@+id/facebook"
             android:layout_width="41dp"
             android:layout_height="40dp"
             android:layout_marginRight="40sp"
 
-            android:background="@drawable/google" />
+            android:background="@drawable/facebook" />
 
         <ImageView
 
-            android:id="@+id/facebook"
+            android:id="@+id/google"
             android:layout_width="41dp"
             android:layout_height="40dp"
             android:layout_marginLeft="40sp"
 
-            android:background="@drawable/facebook" />
+
+            android:background="@drawable/google" />
     </LinearLayout>
 
 

@@ -16,7 +16,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 Button Logout;
 FirebaseAuth mAuth;
-TextView name;
+
+    TextView name;
+    TextView email;
 
 
     @Override
@@ -26,6 +28,7 @@ TextView name;
         Logout = findViewById(R.id.logout);
         mAuth = FirebaseAuth.getInstance();
         name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +49,9 @@ TextView name;
         }
         else
         {
-            name.setText(currentUser.getEmail());
+            email.setText(currentUser.getEmail());
+            name.setText(currentUser.getDisplayName());
+
         }
     }
 
