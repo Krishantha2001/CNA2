@@ -12,8 +12,11 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class flashscreen extends AppCompatActivity {
-ImageView go;
+
+GifImageView go;
 FirebaseAuth mAuth;
 
 
